@@ -17,5 +17,4 @@ fn main() -> Result<(), String> {
 #+ATTR_ORG: :width 600
 #+ATTR_HTML: :width 600
 #+ATTR_HTML: :class images
-[[file:./3569ac5eada385f570366da7e52b56d7.jpg]]
 [[file:./891501f8d5de81cd0d3b886df572272d.jpg]]
