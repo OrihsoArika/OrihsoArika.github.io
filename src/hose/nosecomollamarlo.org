@@ -1,0 +1,21 @@
+#+title: No se como llamar esto xP
+#+author:    Oshiro Arika
+#+email:     orihsoarika@gmail.com
+#+html_head: <script src="main.js"></script> <link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+* hola :>
+esto es una prueba
+#+begin_src rust
+fn main() -> Result<(), String> {
+   println!("Hello World!")
+   Ok(())
+}
+#+end_src
+
+* Imagenes :D
+#+ATTR_ORG: :width 600
+#+ATTR_HTML: :width 600
+#+ATTR_HTML: :class images
+[[file:./3569ac5eada385f570366da7e52b56d7.jpg]]
+[[file:./891501f8d5de81cd0d3b886df572272d.jpg]]
