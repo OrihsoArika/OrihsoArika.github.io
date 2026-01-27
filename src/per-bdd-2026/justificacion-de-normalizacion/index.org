@@ -1,0 +1,25 @@
+#+title:     ¿Por que es importante la normalización de bases de datos?
+#+author:    Oshiro Arika
+#+email:     orihsoarika@gmail.com
+
+* ¿Que es la normalización de Bases de Datos?
+La normalización de una base de datos es un paso esencial tras su creación, por que evita cualquier tipo de anomalía, redundancia y borrado que pueda haber en el diseño de tablas y en la relación entre la información.
+
+– /Pero... ¿Para qué tenemos que normalizar una base de datos?/
+
+Pues para evitar que uno o mas datos estén duplicados en la tabla de una base de datos, o sea, no pueden haber mas dos María con el mismo ID. O datos que no estén en uso.
+
+Esto y otros factores pueden causar confusión en una base de datos tanto a ti como a un Sistema Gestor de Bases de Datos (SGBD), ademas de que dicha base de datos sera mas pesada, lenta y difícil de manejar.
+
+Una normalización de base de datos, sobretodo para empresas B2B, requiere una importante inversión de tiempo y esfuerzo, debido a que contiene muchos datos complejos.
+
+A pesar de que /—En algunos casos—/ las bases de datos normalizadas hacen los procesos mas lentos, aun así merece la pena hacer la normalización para evitar problemas a futuro.
+* Objetivos de la normalización de bases de datos
+- Corregir datos duplicados y anomalías en la base de datos.
+- Evitar la creación y actualización de relaciones y dependencias no deseadas entre datos.
+- Prevenir la eliminación de datos accidentales
+- Optimizar el uso de almacenamiento.
+- Reducir el tiempo y complejidad de revisión cuando se requiere introducir nuevos tipos de datos.
+- Facilitar el acceso e interpretación de los datos a los usuarios y aplicaciones que los usan.
+* ¿Por que es importante normalizar una base de datos?
+Como lo que se escribió antes, ayuda a las empresas e instituciones a organizar, consultar y mantener de forma mas eficaz grandes volúmenes de datos complejos, interrelaciones y dinámicos.  Aunque las empresas ahora generan y almacenan datos a una escala inimaginable, la necesidad de normalizar bases de datos no es nueva.  Es anterior al almacenamiento en la nube e incluso a la invencion de los almacenes de datos

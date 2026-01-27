@@ -14,7 +14,7 @@ fn main() -> Result<(), String> {
 #+end_src
 
 * Imagenes :D
+setzo
 #+ATTR_ORG: :width 600
-#+ATTR_HTML: :width 600
-#+ATTR_HTML: :class images
+#+ATTR_HTML: :class ima
 [[file:./891501f8d5de81cd0d3b886df572272d.jpg]]

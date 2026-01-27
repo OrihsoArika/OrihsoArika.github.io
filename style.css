@@ -41,7 +41,7 @@
 
 #content { max-width: 50em; margin: auto; }
 
-.images img {
+.ima img {
     width: 100%;
     margin: .5em 0px;
     border-radius: var(--content-round-val);
