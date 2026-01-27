@@ -1,6 +1,7 @@
 #+title:     ¿Por que es importante la normalización de bases de datos?
 #+author:    Oshiro Arika
 #+email:     orihsoarika@gmail.com
+#+html_head: <script src="./main.js"></script> <link rel="stylesheet" type="text/css" href="./style.css"/>
 
 * ¿Que es la normalización de Bases de Datos?
 La normalización de una base de datos es un paso esencial tras su creación, por que evita cualquier tipo de anomalía, redundancia y borrado que pueda haber en el diseño de tablas y en la relación entre la información.
@@ -22,4 +23,17 @@ A pesar de que /—En algunos casos—/ las bases de datos normalizadas hacen lo
 - Reducir el tiempo y complejidad de revisión cuando se requiere introducir nuevos tipos de datos.
 - Facilitar el acceso e interpretación de los datos a los usuarios y aplicaciones que los usan.
 * ¿Por que es importante normalizar una base de datos?
-Como lo que se escribió antes, ayuda a las empresas e instituciones a organizar, consultar y mantener de forma mas eficaz grandes volúmenes de datos complejos, interrelaciones y dinámicos.  Aunque las empresas ahora generan y almacenan datos a una escala inimaginable, la necesidad de normalizar bases de datos no es nueva.  Es anterior al almacenamiento en la nube e incluso a la invencion de los almacenes de datos
+Como lo que se escribió antes, ayuda a las empresas e instituciones a organizar, consultar y mantener de forma mas eficaz grandes volúmenes de datos complejos, interrelaciones y dinámicos.
+
+Los datos sin normalizar y desordenados dificultan la compresión y mecánica, afectando negativamente la funcionalidad de las características y funciones.  Por ejemplo, al buscar "Google Chrome" es posible que no muestre los mismos resultados que "Chrome" debido a incoherencias en la representación de los datos.  Esto merma la precisión y eficacia de los procesos de consulta, lo que conduce a resultados inadecuados y conexiones incompletas.
+
+Por eso, lo normalización hace que la búsqueda de términos o entidades especificas sea mas eficiente y precisa.  Las conexiones entre elementos de datos relacionados se refuerzan, lo que permite mejorar la recuperación y el análisis de la información.
+
+Ademas, esta practica tiene implicancias mas amplias para la funcionalidad y el rendimiento de las bases de datos.  Aquellos normalizados son mas fáciles de ordenar, filtrar y analizar, lo que facilita su exploración y reconocimiento de patrones.  Con una menor cantidad de columnas y una organización mejorada, los usuarios acceden a mas registros en una sola pagina, mayor visualización, compresión y reconocimiento de patrones.
+
+Por el lado de la experiencia del usuario, simplifica los procesos, permitiéndoles contar fácilmente con la información y modificarla, al tiempo que garantiza la coherencia, la precisión y la ausencia de contenidos duplicados o redundancias.  Así, múltiples personas pueden leer, interpretar y confiar en los registros presentados.
+
+* Fuentes
+- https://blog.saleslayer.com/es/por-que-es-importante-la-normalizacion-de-base-de-datos
+- https://www.ibm.com/es-es/think/topics/database-normalization
+- https://blog.invgate.com/es/normalizacion-de-base-de-datos

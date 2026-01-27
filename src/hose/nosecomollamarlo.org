@@ -1,7 +1,7 @@
 #+title: No se como llamar esto xP
 #+author:    Oshiro Arika
 #+email:     orihsoarika@gmail.com
-#+html_head: <script src="main.js"></script> <link rel="stylesheet" type="text/css" href="style.css"/>
+#+html_head: <script src="main.js"></script> <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/OrihsoArika/OrihsoArika.github.io/refs/heads/main/style.css"/>
 
 
 * hola :>
