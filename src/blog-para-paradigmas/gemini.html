@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOC Avanzado - Solo CSS</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text: #1f2937;
+            --bg: #ffffff;
+            --sidebar-bg: #f8fafc;
+            --border: #e2e8f0;
+            --header-h: 60px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            scroll-behavior: smooth;
+            background-color: var(--bg);
+        }
+
+        /* --- HEADER MÓVIL --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-h);
+            background: var(--primary);
+            color: white;
+            display: none; /* Oculto en desktop */
+            align-items: center;
+            padding: 0 1rem;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-title {
+            flex-grow: 1;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Botón de Menú (Label) */
+        .menu-toggle-label {
+            cursor: pointer;
+            padding: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Checkbox Oculto */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* --- LAYOUT PRINCIPAL --- */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            gap: 3rem;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .content {
+            flex: 3;
+        }
+
+        /* --- TABLA DE CONTENIDOS (TOC) --- */
+        .toc-sticky {
+            position: sticky;
+            top: 2rem;
+            padding: 1.5rem;
+            background: var(--sidebar-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .toc-title {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .toc-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.95rem;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .toc-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- CONTENIDO --- */
+        section {
+            margin-bottom: 5rem;
+            padding-top: 2rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+
+        .placeholder-box {
+            background: #f1f5f9;
+            height: 500px;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            border: 2px dashed var(--border);
+        }
+
+        /* --- RESPONSIVE (MÓVIL) --- */
+        @media (max-width: 768px) {
+            header {
+                display: flex; /* Mostrar barra superior */
+            }
+
+            .container {
+                flex-direction: column;
+                padding-top: calc(var(--header-h) + 1rem);
+            }
+
+            .sidebar {
+                position: fixed;
+                top: var(--header-h);
+                left: 0;
+                width: 100%;
+                height: 0; /* Cerrado por defecto */
+                overflow: hidden;
+                background: white;
+                z-index: 900;
+                transition: height 0.3s ease-in-out;
+                border-bottom: 1px solid var(--border);
+                min-width: 100%;
+            }
+
+            .toc-sticky {
+                position: static;
+                border: none;
+                border-radius: 0;
+                height: 100%;
+                overflow-y: auto;
+            }
+
+            /* Logica del Checkbox Hack */
+            #menu-toggle:checked ~ .container .sidebar {
+                height: 300px; /* Altura del menú al abrirse */
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            /* Cambiar texto del botón según estado */
+            #menu-toggle:checked ~ header .menu-toggle-label::before {
+                content: "CERRAR ÍNDICE";
+            }
+            #menu-toggle:not(:checked) ~ header .menu-toggle-label::before {
+                content: "VER ÍNDICE";
+            }
+
+            .content {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Checkbox Hack: Control de estado -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Barra Superior fija para móviles -->
+    <header>
+        <div class="header-title">Mi Artículo</div>
+        <label for="menu-toggle" class="menu-toggle-label"></label>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar a la izquierda -->
+        <aside class="sidebar">
+            <nav class="toc-sticky">
+                <div class="toc-title">Tabla de Contenidos</div>
+                <ul class="toc-links">
+                    <li><a href="#intro">1. Introducción</a></li>
+                    <li><a href="#config">2. Configuración General</a></li>
+                    <li><a href="#diseno">3. Principios de Diseño</a></li>
+                    <li><a href="#conclusiones">4. Conclusiones</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <h1 id="top">Navegación Inteligente en Móviles</h1>
+            <p>Este sistema utiliza una barra superior fija y un menú colapsable que no requiere JavaScript, garantizando que el usuario siempre tenga el control de la navegación.</p>
+
+            <section id="intro">
+                <h2>1. Introducción</h2>
+                <div class="placeholder-box">Gráfico Introductorio</div>
+                <p>En dispositivos móviles, el espacio es sagrado. Una barra superior permite que el usuario acceda al índice del contenido en cualquier momento sin perder su posición actual de lectura.</p>
+            </section>
+
+            <section id="config">
+                <h2>2. Configuración General</h2>
+                <div class="placeholder-box">Diagrama de Configuración</div>
+                <p>La clave es el elemento "label" vinculado al checkbox oculto. Cuando el usuario toca el botón en la barra superior, el checkbox cambia de estado y el CSS responde mostrando la barra lateral.</p>
+            </section>
+
+            <section id="diseno">
+                <h2>3. Principios de Diseño</h2>
+                <div class="placeholder-box">Ejemplos de Diseño</div>
+                <p>Al usar scroll-behavior: smooth, la experiencia se siente como una aplicación nativa. No hay saltos bruscos y la transición del menú es fluida.</p>
+            </section>
+
+            <section id="conclusiones">
+                <h2>4. Conclusiones</h2>
+                <div class="placeholder-box">Resumen de Datos</div>
+                <p>Implementar soluciones puras de CSS reduce el tiempo de ejecución y mejora la accesibilidad, ya que no dependemos de que el navegador cargue scripts externos o complejos.</p>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

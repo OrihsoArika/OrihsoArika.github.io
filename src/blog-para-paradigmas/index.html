@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/jpeg" sizes="64x64" href="/Images/IMG_20260417_143248.jpg" />
+  <title>Blog - La arquitectura Cliente-Servidor</title>
+</head>
+
+<body>
+  <input type="checkbox" id="menu-toggle" />
+  <input type="checkbox" id="participants-toggle" />
+
+  <header>
+    <div class="header-title"><a href="orishoarika.github.com">Blog</a></div>
+
+    <div class="header-controls">
+      <label for="participants-toggle" class="participants-toggle-menu">integrantes</label>
+      <label for="menu-toggle" class="menu-toggle-label"></label>
+    </div>
+  </header>
+  
+  <div class="participants-dropdown">
+    <div class="participants-grid">
+    <div class="participants-header">Ekuipo</div>
+      <div class="participant-card">
+        <img class="participant-img" src="./Images/photo_2026-04-21_08-23-34.jpg" alt="" />
+        <p class="participant-name">Ramses Cordero</p>
+        <p class="participant-ID">31.755.199</p>
+      </div>
+      <div class="participant-card">
+        <img class="participant-img" src="./Images/CarlosMedinaFoto.png" alt="" />
+        <p class="participant-name">Carlos Medina</p>
+        <p class="participant-ID">22.615.942</p>
+      </div>
+      <div class="participant-card">
+        <img class="participant-img" src="" alt="No hay foto porque no hay internet xdd" />
+        <p class="participant-name">Gemini</p>
+        <p class="participant-ID"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <!-- TOC -->
+    <aside class="left-sidebar">
+      <nav class="toc">
+        <div class="toc-tittle">Contenido</div>
+        <ul class="toc-list">
+          <li><a href="#arqCliente-servidor">La arquitectura Cliente-Servidor</a></li>
+          <ul>
+            <li><a href="#actores">Los Actores</a></li>
+            <ul>
+              <li><a href="#cliente">El Cliente</a></li>
+              <li><a href="#servidor">El Servidor</a></li>
+            </ul>
+            <li><a href="#cicloEstructura">¿Cual es el ciclo?</a></li>
+            <li><a href="#caracteristicas">Caracteristicas</a></li>
+            <li><a href="#prosYContras">Ventajas y Desventajas</a></li>
+            <ul>
+              <li><a href="#pros">Ventajas</a></li>
+              <li><a href="#contras">Desventajas</a></li>
+            </ul>
+          </ul>
+        </ul>
+      </nav>
+    </aside>
+
+    <article>
+      <div class="header2"><h2 id="arqCliente-servidor">La arquitectura Cliente-Servidor</h2></div>
+      <img src="./Images/1533076023293.png" />
+      <section>
+        <p>
+          Para poder entender la estructura tenemos que saber como esta
+          estructurada, <i>por supuesto que si</i>.
+        </p>
+        
+        <h3 id="actores">Los Actores</h3>
+        <section>
+          
+          <div class="card">
+            <h4 id="cliente">El Cliente:</h4>
+              <p>
+                <b>Es aquel que hace peticiones al servidor.</b> Puede ser un navegador tal
+                como Firefox, Google Chrome o Safari; una aplicacion en tu
+                computadora o un juego online.
+              </p>
+          </div>
+            
+          <div class="card">
+            <h4 id="servidor">El Servidor:</h4>
+            <section>
+              <p>
+                <b>Es una maquina (o un conjunto de estas) generalmente de gran
+                capacidad que siempre esta y estara encendida (exepto en
+                mantenimiento, claro), esperando solicitudes generadas por los
+                clientes conectados a estas maquinas.</b> Su rol es gestionar recursos,
+                procesar datos y solicitudes y enviar una respuesta valida siempre
+                que sea posible. 
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <h3 id="cicloEstructura">¿Cual es el ciclo de esta estructura?</h3>
+        <section>
+          <p>Este ciclo consiste en tres pasos.</p>
+          <ol>
+            <li>Peticion (Request)</li>
+            <p>
+              <b>El cliente envía un mensaje al servidor solicitando un servicio o
+              recurso.</b> Por ejemplo, cuando abres YouTube para ver el apartado
+              "Para Tí". 
+            </p>
+            <li>Procesamiento</li>
+            <p>
+              <b>El servidor recibe la peticion, chequea quien eres, busca y
+              procesa su base de datos para preparar una respuesta.</b> Por 
+              ejemplo, antes de que YouTube te muestre el apartado "Para Tí",
+              corre una red neuronal usando como datos tu historial de
+              visualizacion para poder asi adivinar que video quieres ver.
+            </p>
+            <li>Respuesta (Response)</li>
+            <p>
+              <b>El servidor envia la respuesta de la peticion.</b> Si todo sale 
+              bien, veras la vista previa de los videos de tus canales
+              favoritos. si no, puede que no veas los videos que quieres
+              ver. En otros casos, el servidor suele decirte que ha pasado,
+              como mostrarte el clasico error 404, o sea, que el no logro
+              encontran el archivo especificado. 
+            </p>
+          </ol>
+        </section>
+
+        <h3 id="caracteristicas">Caracteristicas</h3>
+        <section>
+          <ol>
+            <li>Centracizacion</li>
+            <p>Los datos y gestion suelen estar del lado del servidor, lo cual facilita el control y seguridad de este.</p>
+            <li>Escalabilidad</li>
+            <p>Puedes añadir mas clientes comodamente, o hacer un servidor mas capaz si hay mucha demanda. </p>
+            <li>Independencia</li>
+            <p>El cliente y servidor pueden estar en plataformas distintas. O sea, un cliente IPhone puede pedir datos a un servidor con un sistema BSD.</p>
+          </ol>
+        </section>
+
+        <h3 id="prosYContras">Ventajas y Desventajas</h3>
+        <section>
+          <div class="comparativa">
+            <div class="card" id="pros">
+              <h4 class="ventajas">Ventajas</h4>
+              <p>
+                Hace la actualizacion de datos mas facil (solo cambias de servidor, todos los clientes veran lo mismo) y permite que dispositivos de poca potencia accedan a procesamiento complejos que se realizan en la nube.
+              </p>
+            </div>
+            <div class="card" id="contras">
+              <h4 class="desventajas">Desventajas</h4>
+              <p>
+                Si el servidor deja de funcionar, todos los clientes conectados no podran acceder al servidor. Ademas, si hay demasiados clientes al mismo tiempo, el servidor se puede congestionar. 
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    </section>
+    </article>
+  </div>
+</body>
+
+</html>
