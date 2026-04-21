@@ -1,125 +1,79 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <title>Arquitectura Cliente-Servidor</title>
-  <link rel="stylesheet" href="../blog-paradigmas-conceptuales/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32x32.jpg">
+  <title>Arquitectura Cliente-Servidor</title>
 </head>
 
 <body>
-  <div class="main-div">
-    <h2>La Arquitectura Cliente-Servidor</h2>
-    <header>
-      <p>
-        La estructura cliente-servidor es basicamente la espina dorsal
-        de todo internet el internet y en la practica es tan basico
-        como si estuvieses preguntando por la hora a alguien, pero en
-        el internet es <i>un poco</i> mas privado que esa analogia.
-      </p>
-      <p>
-        Para poder entender la estructura tenemos que saber como esta
-        estructurada, por supuesto que si.
-      </p>
-      <h3>Los Actores</h3>
-      <header>
-        <h4>El Cliente</h4>
-        <header>
-          <p>
-            Es aquel que hace peticiones al servidor. Puede ser un
-            navegador tal como Firefox, Google Chrome o Safari; una
-            aplicacion en tu computadora o un juego online. Su rol
-            es mostrar una interfaz o entorno en el cual el usuario
-            puede interactuar y crear peticiones al servidor a traves
-            del internet.
-          </p>
-        </header> <!-- El Cliente <h4> -->
-        <h4>El Servidor</h4>
-        <header>
-          <p>
-            Es una maquina (o un conjunto de estas) generalmente de
-            gran capacidad que siempre esta y estara encendida
-            <i>(exepto en mantenimiento, claro)</i>, esperando
-            solicitudes generadas por los clientes conectados a estas
-            maquinas. Su rol es gestionar recursos, procesar datos y
-            solicitudes y enviar una respuesta valida siempre que sea
-            posible.
-          </p>
-        </header> <!-- El Servidor <h4> -->
-      </header> <!-- Los Actores <h3> -->
-      <h3>¿Cual es el ciclo de esta estructura?</h3>
-      <header>
-        <p>Este ciclo consiste en tres pasos.</p>
-        <ol>
-          <li>Peticion (Request; Query)</li>
-          <p>
-            El cliente envía un mensaje al servidor solicitando un
-            servicio o recurso. Por ejemplo, cuando abres YouTube
-            para ver el apartado "Para Tí".
-          </p>
-          <li>Procesamiento</li>
-          <p>
-            El servidor recibe la peticion, chequea quien eres,
-            busca y procesa su base de datos para preparar una
-            respuesta. Por ejemplo, antes de que YouTube te
-            muestre el apartado "Para Tí", corre una red neuronal
-            usando como datos tu historial de visualizacion para
-            poder asi adivinar que video quieres ver.
-          </p>
-          <li>Respuesta (Response)</li>
-          <p>
-            El servidor envia la respuesta a la peticion. Si todo
-            sale bien, veras la vista previa de los videos de tus
-            canales favoritos. si no, puede que no veas los videos
-            que quieres ver. En otros casos, el servidor suele
-            decirte que ha pasado, como mostrarte el clasico error
-            404, o sea, que el no logro encontran el archivo
-            especificado.
-          </p>
-        </ol>
-      </header> <!-- ¿Cual es el ciclo de esta estructura? <h3> -->
-      <h3>Caracteristicas</h3>
-      <header>
-        <ol>
-          <li>Centracizacion</li>
-          <p>
-            Los datos y gestion suelen estar del lado del servidor,
-            lo cual facilita el control y seguridad de este.
-          </p>
-          <li>Escalabilidad</li>
-          <p>
-            Puedes añadir mas clientes comodamente, o hacer un
-            servidor mas capaz si hay mucha demanda.
-          </p>
-          <li>Independencia</li>
-          <p>
-            El cliente y servidor pueden estar en plataformas
-            distintas. O sea, un cliente IPhone puede pedir
-            datos a un servidor con un sistema BSD.
-          </p>
-        </ol>
-      </header> <!-- Caracteristicas <h3> -->
-      <h3>Ventajas y Desventajas</h3>
-      <header>
-        <H4>Ventajas</H4>
-        <header>
-          Hace la actualizacion de datos mas facil (solo cambias
-          de servidor, todos los clientes veran lo mismo) y
-          permite que dispositivos de poca potencia accedan a
-          procesamiento complejos que se realizan en la nube
-        </header>
-        <H4>Desventajas</H4>
-        <header>
-          Si el servidor deja de funcionar, todos los clientes
-          conectados no podran acceder al servidor. Ademas, si
-          hay demasiados clientes al mismo tiempo, el servidor
-          se puede congestionar.
-        </header> <!-- Desventajas <h4> -->
-      </header> <!-- Ventajas y Desventajas <h3> -->
-    </header> <!-- Arquitectura Cliente-Servidor <h2> -->
-  </div>
-  <p style="color: #545464;">Ramses Cordero. C.I: 31.755.199 | Carlos Medina. C.I: 22.615.942</p>
-  <a href="https://orihsoarika.github.io">Ir a pagina principal</a>
-</body>
+    <div class="container">
+        <article>
+            <h2>La Arquitectura Cliente-Servidor</h2>
 
+            <p>
+                La estructura cliente-servidor es básicamente la espina dorsal
+                de todo internet. En la práctica es tan básico como si estuvieses 
+                preguntando por la hora a alguien, pero en internet es <i>un poco</i> 
+                más privado que esa analogía.
+            </p>
+
+            <section>
+                <h3>Los Actores</h3>
+                <div class="card">
+                    <h4>El Cliente</h4>
+                    <p>
+                        Es aquel que hace peticiones al servidor. Puede ser un
+                        navegador tal como Firefox, Google Chrome o Safari; una
+                        aplicación en tu computadora o un juego online.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>El Servidor</h4>
+                    <p>
+                        Es una máquina de gran capacidad que siempre está encendida, 
+                        esperando solicitudes. Su rol es gestionar recursos y enviar 
+                        una respuesta válida.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>¿Cuál es el ciclo de esta estructura?</h3>
+                <ol>
+                    <li>Petición (Request)</li>
+                    <p>El cliente envía un mensaje solicitando un servicio o recurso.</p>
+
+                    <li>Procesamiento</li>
+                    <p>El servidor recibe la petición, valida la identidad y procesa los datos.</p>
+
+                    <li>Respuesta (Response)</li>
+                    <p>El servidor envía el resultado. Si falla, recibes errores como el clásico 404.</p>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Ventajas y Desventajas</h3>
+                <h4>Ventajas</h4>
+                <p>Facilita la actualización de datos y permite que dispositivos de poca potencia accedan a procesos complejos.</p>
+
+                <h4>Desventajas</h4>
+                <p>Si el servidor cae, el servicio se interrumpe para todos. Puede haber congestión por exceso de tráfico.</p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+      <p>
+        Hecho por:<br />
+        Ramses Cordero. C.I: 31.755.199<br />
+        Carlos Medina. C.I: 22.615.942<br />
+        y Gemini un poco.
+      </p>
+      <a href="https://orihsoarika.github.io">Ir a pagina principal</a>
+    </footer>
+</body>
 </html>

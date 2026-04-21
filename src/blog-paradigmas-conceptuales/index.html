@@ -2,29 +2,37 @@
 <html>
 
 <head>
-  <title>Paradigmas Comceptuales</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon-32x32.jpg">
+  <title>Paradigmas Comceptuales</title>
 </head>
 
 <body>
-  <div class="main-div">
+  <div class="container">
+    <article>
     <h2>Paradigmas Conceptuales</h2>
-    <header>
+      <ul class="TOC">
+        <li><a href="#Origen">Oregene</a></li>
+        <li><a href="#Origen">Oregene</a></li>
+      </ul>
       <p>
         Un paradigma conceptual es un modelo, patron o conjunto de creencias
         y valores compartidos por una comunidad que define como se entiende
         la realidad, que preguntas son relevantes y que metodos son aceptables
         para investigar un campo especifico.
       </p>
-      <h3>Origen</h3>
-      <header>
+
+      <section>
+      <h3 id="Origen">Origen</h3>
         <p>
           El termino se popularizo por el fisico y filosofo Thomas Kuhn
           en su libro <i>"La estructura de las revoluciones cientificas"</i>.
           En el, Kuhn explica que la ciencia no progresa de una manera lineal,
           sino que lo hace a traves de saltos:
         </p>
+
         <ol>
           <li>Ciencia Normal</li>
           <p>
@@ -43,9 +51,12 @@
             Surge un nuevo paradigma que explica mejor la realidad.
           </p>
         </ol>
-      </header> <!-- Origen <h3> -->
-      <h3>Componentes</h3>
-      <header>
+
+      </section> <!-- Origen <h3> -->
+
+      <section>
+      <h3 id="Componentes">Componentes</h3>
+
         <p>Para que algo se considere un paradigma conceptual, suele incluir:</p>
         <ul>
           <li>Ontologia</li>
@@ -65,9 +76,11 @@
             ¿Que es importante o etico en esta diciplina?
           </p>
         </ul>
-      </header> <!-- Componentes <h3> -->
-      <h3>Ejemplos en distintas areas</h3>
-      <header>
+
+      </section> <!-- Componentes <h3> -->
+
+      <section>
+      <h3 id="EjemplosAreasDistintas">Ejemplos en distintas areas</h3>
         <table>
           <tr>
             <th>Area</th>
@@ -90,9 +103,10 @@
             <td class="last-last">Teoria Germinal: Los Microorganismos causan enfermedades.</td>
           </tr>
         </table>
-      </header> <!-- Ejemplos en distintas areas <h3> -->
-      <h3>¿Como aplica esto en el desarrollo de software?</h3>
-      <header>
+      </section> <!-- Ejemplos en distintas areas <h3> -->
+
+      <section>
+      <h3 id="AplicEnSoftwareDev">¿Como aplica esto en el desarrollo de software?</h3>
         <p>
           En este caso los paradigmas conceptuales son es un estilo o filosifia de
           construccion de codigo. Lo que importa es como piensas en el problema y
@@ -102,10 +116,12 @@
           Si cambias de paradigma, no solo cambias la sintaxis del codigo; cambias la
           forma en la que organizas la logica y datos.
         </p>
+
+        <section>
         <h4>Paradigma Imperativo vs. Paradigma Declarativo</h4>
-        <header>
+
+          <section>
           <h5>Paradigma Imperativo</h5>
-          <header>
             <p>
               Te centras en <b>como</b> se debe hacer algo. Es una serie de instrucciones paso
               a paso que cambian el estado del programa (como una receta de cocina).
@@ -115,9 +131,10 @@
               </li>
             </ul>
             </p>
-          </header>
+          </section>
+
+          <section>
           <h5>Paradigma Declarativo</h5>
-          <header>
             <p>
               Te centras en <b>que</b> quieres obtener, sin describir explicitamente el flujo
               de control.
@@ -128,12 +145,13 @@
               </li>
             </ul>
             </p>
-          </header>
-        </header>
+          </section>
+        </section>
+
+        <section>
         <h4>Paradigmas comunes y su forma de ver el mundo</h4>
-        <header>
+          <section>
           <h5>Programacion Orientada a Objetos (POO; OOP)</h5>
-          <header>
             <p>
               Este paradigma ve al software como una coleccion de objetos que
               interactuan entre si. Cada uno tiene datos (atributos) y
@@ -145,8 +163,9 @@
               </li>
             </ul>
             </p>
+
+            <section>
             <h5>Programacion Funcional</h5>
-            <header>
               <p>
                 Este paradigma ve al software como una serie de funciones matematicas.
                 Esto lo hace muy potente en sistemas concurrentes y procesamiento de
@@ -157,9 +176,10 @@
                 </li>
               </ul>
               </p>
-            </header>
+            </section>
+
+            <section>
             <h5>Arquitectura Entidad-Componente-Sistema (ECS)</h5>
-            <header>
               <p>
                 Muy usado para el desarrollo de motores videojuegos y sistemas de alto rendimiento.
                 A diferencia del POO tradicional, aqui se separan los datos (Componentes) del
@@ -171,10 +191,11 @@
                 </li>
               </ul>
               </p>
-            </header> <!-- h5 -->
-          </header>
+            </section> <!-- h5 -->
+          </section>
+
+          <section>
           <h4>Enfoque multiparadigma</h4>
-          <header>
             <p>
               Hoy en dia, es raro encontrar un lenguaje que se limite a un solo paradigma.
               Los lenguajes modernos mas potentes (como los que se usan en programacion de
@@ -185,9 +206,10 @@
               tambien crecen abstracciones seguras y elegantes tomadas de la programacion
               funcional para evitar errores de memoria o facilitar la concurrencia.
             </p>
-          </header>
+          </section>
+
+          <section>
           <h4>Importancia de cambiar paradigmas en programacion</h4>
-          <header>
             <ul>
               <li>
                 <b>Resolucion de problemas:</b> Te permite ver soluciones que en tu paradigma
@@ -200,12 +222,19 @@
                 ser mas naturales con POO.
               </li>
             </ul>
-          </header>
-        </header>
-      </header> <!-- Paradigmas Conceptuales <h2> -->
+          </section>
+        </section>
+      </article> <!-- Paradigmas Conceptuales <h2> -->
   </div>
-  <p style="color: #545464;">Ramses Cordero. C.I: 31.755.199 | Carlos Medina. C.I: 22.615.942</p>
-  <a href="https://orihsoarika.github.io">Ir a pagina principal</a>
+  <footer>
+    <p>
+      Hecho por:<br />
+      Ramses Cordero. C.I: 31.755.199<br />
+      Carlos Medina. C.I: 22.615.942<br />
+      y Gemini un poco.
+      </p>
+    <a href="https://orihsoarika.github.io">Ir a pagina principal</a>
+  </footer>
 </body>
 
 </html>

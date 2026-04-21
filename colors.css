@@ -25,5 +25,6 @@
   --fg: var(--fujiWhite);
   --accent: var(--crystalBlue);
   --text-dim: var(--fujiGray);
+  --outline: var(--sumiInk5);
 }
 

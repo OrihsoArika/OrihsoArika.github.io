@@ -1,248 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
+@import url('colors.css');
 
-:root {
-    font-family: "Rubik";
-
-    --mahogany-100: #fee4df;
-    --mahogany-200: #ffcdc4;
-    --mahogany-300: #fead9f;
-    --mahogany-400: #fd9a8a;
-    --mahogany-500: #fa7b69;
-    --mahogany-600: #dc5645;
-    --mahogany-700: #93372b;
-    --mahogany-800: #7f2e24;
-    --mahogany-900: #501a13;
-    --azure-100: #dbecfd;
-    --azure-200: #bddcfe;
-    --azure-300: #90c6ff;
-    --azure-400: #75b9ff;
-    --azure-500: #47a5ff;
-    --azure-600: #0185e4;
-    --azure-700: #025798;
-    --azure-800: #014b83;
-    --azure-900: #002d54;
-    --flamingo-100: #ede7fc;
-    --flamingo-200: #e0d2fc;
-    --flamingo-300: #ceb6fb;
-    --flamingo-400: #c4a6fb;
-    --flamingo-500: #b68dfa;
-    --flamingo-600: #9a6be0;
-    --flamingo-700: #664696;
-    --flamingo-800: #573b81;
-    --flamingo-900: #362452;
-
-    --text-fore-color: var(--flamingo-900);
-    --background-color: var(--flamingo-100);
-    --content-color: var(--flamingo-300);
-
-    --content-round-val: 1em;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-#content { max-width: 50em; margin: auto; }
-
-.ima img {
-    width: 100%;
-    margin: .5em 0px;
-    border-radius: var(--content-round-val);
-    border: 2pt solid var(--flamingo-600);
+.multidiv {
+  display: flex;
 }
 
 body {
-    background-color: var(--background-color);
-    margin: 1em;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Rubik', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
 }
-.content {
-    color: var(--text-fore-color);
-    background-color: var(--content-color);
-    padding: .5em 3em;
-    border-radius: var(--content-round-val);
-}
-.title  {
-    color: var(--text-fore-color);
-    text-align: center;
-    margin-bottom: 1.5em;
-}
-.subtitle {
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    margin-top:0;
-}
-.todo   { font-family: "JetBrains Mono"; color: red; }
-.done   { font-family: "JetBrains Mono"; color: green; }
-.priority { font-family: "JetBrains Mono"; color: orange; }
-.tag    { background-color: #eee; font-family: "JetBrains Mono";
-          padding: 2px; font-size: 80%; font-weight: normal; }
-.timestamp { color: #bebebe; }
-.timestamp-kwd { color: #5f9ea0; }
-.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-.org-center { margin-left: auto; margin-right: auto; text-align: center; }
-.underline { text-decoration: underline; }
-#postamble p, #preamble p { font-size: 90%; margin: .2em; }
-p.verse { margin-left: 3%; }
-pre {
-    border: 3px solid #000c;
-    border-radius: 12px;
-    background-color: #1a1b26;
-    padding: 8pt;
-    font-family: "JetBrains Mono";
-    overflow: auto;
-    margin: 1.2em;
-}
-pre.src {
-    color: #a9b1d6;
-    background-color: #1a1b26;
-    position: relative;
-    overflow: auto;
-}
-pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-}
-pre.src:hover:before { display: inline; margin-top: 14px;}
-/* Languages per Org manual */
-pre.src-asymptote:before { content: 'Asymptote'; }
-pre.src-awk:before { content: 'Awk'; }
-pre.src-authinfo::before { content: 'Authinfo'; }
-pre.src-C:before { content: 'C'; }
-/* pre.src-C++ doesn't work in CSS */
-pre.src-clojure:before { content: 'Clojure'; }
-pre.src-css:before { content: 'CSS'; }
-pre.src-D:before { content: 'D'; }
-pre.src-ditaa:before { content: 'ditaa'; }
-pre.src-dot:before { content: 'Graphviz'; }
-pre.src-calc:before { content: 'Emacs Calc'; }
-pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-pre.src-fortran:before { content: 'Fortran'; }
-pre.src-gnuplot:before { content: 'gnuplot'; }
-pre.src-haskell:before { content: 'Haskell'; }
-pre.src-hledger:before { content: 'hledger'; }
-pre.src-java:before { content: 'Java'; }
-pre.src-js:before { content: 'Javascript'; }
-pre.src-latex:before { content: 'LaTeX'; }
-pre.src-ledger:before { content: 'Ledger'; }
-pre.src-lisp:before { content: 'Lisp'; }
-pre.src-lilypond:before { content: 'Lilypond'; }
-pre.src-lua:before { content: 'Lua'; }
-pre.src-matlab:before { content: 'MATLAB'; }
-pre.src-mscgen:before { content: 'Mscgen'; }
-pre.src-ocaml:before { content: 'Objective Caml'; }
-pre.src-octave:before { content: 'Octave'; }
-pre.src-org:before { content: 'Org mode'; }
-pre.src-oz:before { content: 'OZ'; }
-pre.src-plantuml:before { content: 'Plantuml'; }
-pre.src-processing:before { content: 'Processing.js'; }
-pre.src-python:before { content: 'Python'; }
-pre.src-R:before { content: 'R'; }
-pre.src-ruby:before { content: 'Ruby'; }
-pre.src-sass:before { content: 'Sass'; }
-pre.src-scheme:before { content: 'Scheme'; }
-pre.src-screen:before { content: 'Gnu Screen'; }
-pre.src-sed:before { content: 'Sed'; }
-pre.src-sh:before { content: 'shell'; }
-pre.src-sql:before { content: 'SQL'; }
-pre.src-sqlite:before { content: 'SQLite'; }
-/* additional languages in org.el's org-babel-load-languages alist */
-pre.src-forth:before { content: 'Forth'; }
-pre.src-io:before { content: 'IO'; }
-pre.src-J:before { content: 'J'; }
-pre.src-makefile:before { content: 'Makefile'; }
-pre.src-maxima:before { content: 'Maxima'; }
-pre.src-perl:before { content: 'Perl'; }
-pre.src-picolisp:before { content: 'Pico Lisp'; }
-pre.src-scala:before { content: 'Scala'; }
-pre.src-shell:before { content: 'Shell Script'; }
-pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-/* additional language identifiers per "defun org-babel-execute"
-      in ob-*.el */
-pre.src-cpp:before  { content: 'C++'; }
-pre.src-abc:before  { content: 'ABC'; }
-pre.src-coq:before  { content: 'Coq'; }
-pre.src-groovy:before  { content: 'Groovy'; }
-/* additional language identifiers from org-babel-shell-names in
-    ob-shell.el: ob-shell is the only babel language using a lambda to put
-    the execution function name together. */
-pre.src-bash:before  { content: 'bash'; }
-pre.src-csh:before  { content: 'csh'; }
-pre.src-ash:before  { content: 'ash'; }
-pre.src-dash:before  { content: 'dash'; }
-pre.src-ksh:before  { content: 'ksh'; }
-pre.src-mksh:before  { content: 'mksh'; }
-pre.src-posh:before  { content: 'posh'; }
-/* Additional Emacs modes also supported by the LaTeX listings package */
-pre.src-ada:before { content: 'Ada'; }
-pre.src-asm:before { content: 'Assembler'; }
-pre.src-caml:before { content: 'Caml'; }
-pre.src-delphi:before { content: 'Delphi'; }
-pre.src-html:before { content: 'HTML'; }
-pre.src-idl:before { content: 'IDL'; }
-pre.src-mercury:before { content: 'Mercury'; }
-pre.src-metapost:before { content: 'MetaPost'; }
-pre.src-modula-2:before { content: 'Modula-2'; }
-pre.src-pascal:before { content: 'Pascal'; }
-pre.src-ps:before { content: 'PostScript'; }
-pre.src-prolog:before { content: 'Prolog'; }
-pre.src-simula:before { content: 'Simula'; }
-pre.src-tcl:before { content: 'tcl'; }
-pre.src-tex:before { content: 'TeX'; }
-pre.src-plain-tex:before { content: 'Plain TeX'; }
-pre.src-verilog:before { content: 'Verilog'; }
-pre.src-vhdl:before { content: 'VHDL'; }
-pre.src-xml:before { content: 'XML'; }
-pre.src-nxml:before { content: 'XML'; }
-/* add a generic configuration mode; LaTeX export needs an additional
-    (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-pre.src-conf:before { content: 'Configuration File'; }
 
-table { border-collapse:collapse; }
-caption.t-above { caption-side: top; }
-caption.t-bottom { caption-side: bottom; }
-td, th { vertical-align:top;  }
-th.org-right  { text-align: center;  }
-th.org-left   { text-align: center;   }
-th.org-center { text-align: center; }
-td.org-right  { text-align: right;  }
-td.org-left   { text-align: left;   }
-td.org-center { text-align: center; }
-dt { font-weight: bold; }
-.footpara { display: inline; }
-.footdef  { margin-bottom: 1em; }
-.figure { padding: 1em; }
-.figure p { text-align: center; }
-.equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
+.container {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
 }
-.equation {
-    vertical-align: middle;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
+
+/* Profile Section */
+.avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
 }
-.inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
+
+.avatar-container::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--sakuraPink), var(--surimiOrange), var(--crystalBlue));
+  z-index: -1;
+  animation: rotate 4s linear infinite;
 }
-#org-div-home-and-up
-{ text-align: right; font-size: 70%; white-space: nowrap; }
-textarea { overflow-x: auto; }
-.linenr { font-size: smaller }
-.code-highlighted { background-color: #ffff00; }
-.org-info-js_info-navigation { border-style: none; }
-#org-info-js_console-label
-{ font-size: 10px; font-weight: bold; white-space: nowrap; }
-.org-info-js_search-highlight
-{ background-color: #ffff00; color: #000000; font-weight: bold; }
-.org-svg { }
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--sumiInk1);
+  border: 3px solid var(--bg);
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--fujiWhite);
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  color: var(--fujiGray);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Links Section */
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-card {
+  background-color: var(--bg-card);
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card:hover {
+  border-color: var(--accent);
+  background-color: var(--sumiInk5);
+  transform: translateX(5px);
+}
+
+.link-card::after {
+  content: '→';
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.link-card:hover::after {
+  opacity: 1;
+}
+
+/* Categories / Colors for links */
+.blog { border-left: 4px solid var(--springGreen); }
+.github { border-left: 4px solid var(--crystalBlue); }
+
+.colorscheme-link {
+  color: var(--springBlue);
+}
+
+.section-title {
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--boatYellow2);
+  margin: 2rem 0rem 1rem;
+  padding-left: 5px;
+  border-left: 2px solid var(--boatYellow2);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.item-card {
+  background-color: var(--bg-card);
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #fff2;
+  position: relative;
+  text-align: left;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
+}
+
+.item-card:hover {
+  border-color: var(--accent);
+  background-color: var(--sumiInk5);
+  transform: translateX(8px);
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.item-desc {
+  font-size: 0.85rem;
+  color: var(--fujiGray);
+}
+
+.item-date {
+  font-size: 0.7rem;
+  color: var(--sakuraPink);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.blog-item { border-left: 4px solid var(--springGreen); }
+.social-item { border-left: 4px solid var(--oniViolet); }
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: var(--fujiGray);
+  letter-spacing: 1px;
+  text-transform: '';
+}
