@@ -24,6 +24,32 @@ body {
   line-height: 1.6;
 }
 
+#iframe-trigger { display: none; }
+.iframe-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+#iframe-trigger:checked~ .iframe-wapper {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.iframe-cont {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.iframe-cont iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 480px;
